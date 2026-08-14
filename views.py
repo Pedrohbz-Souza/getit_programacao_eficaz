@@ -6,12 +6,18 @@ def index():
     notes_li = [
         note_template.format(title=dados['titulo'], details=dados['detalhes'])
         for dados in load_data('notes.json')
+
     ]
     notes = '\n'.join(notes_li)
 
     return load_template('index.html').format(notes=notes)
 
+
 def submit(titulo, detalhes):
     note_dict= {'titulo': titulo, 'detalhes': detalhes}
+    with open('static/data/notes.json', 'r', encoding='utf-8') as arquivo:
+        notes_list = json.load(arquivo)
+    notes_list.append(note_dict)
     with open('static/data/notes.json', 'w', encoding='utf-8') as arquivo:
-        json.dump(note_dict, arquivo)
+        json.dump(notes_list, arquivo)
+    return 
