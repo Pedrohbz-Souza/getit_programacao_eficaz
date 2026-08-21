@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f0f0;
+  padding: 30px;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
+  display: block;
+  margin-bottom: 15px;
+  width: 300px;
+  padding: 8px;
+}
+
+a {
+  margin-right: 10px;
+  color: blue;
+  text-decoration: none;
+}
