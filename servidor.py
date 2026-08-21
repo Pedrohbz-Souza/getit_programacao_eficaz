@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 # Configurando a pasta de arquivos estáticos
 app.static_folder = 'static'
+app.style_folder = 'static/css'
 
 @app.route('/')
 def index():
